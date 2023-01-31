@@ -1,0 +1,300 @@
+*{
+  background-color: black;
+  color: aliceblue;
+}
+.App {
+  margin: 0;
+  padding: 0;
+  color: aliceblue;
+  background-color:#202020;
+  /* text-align: center; */
+}
+
+/* header */
+
+.header{
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.header__left{
+  align-items: center;
+  margin-left: 8px;
+}
+
+
+
+
+
+.header__input {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  border: 1px solid #202020;
+  border-radius: 5cm;
+
+}
+
+.header__input > input{
+  flex: 1;
+  border: none;
+
+}
+
+.header__search{
+  width: 50px !important;
+  border-left: 1px solid  lightgray;
+}
+
+.header__logo{
+
+  object-fit: contain;
+  height: 17px;
+  width: 93px;
+  margin-left: 10px;
+  
+}
+
+.header__icon{
+  margin-right: 10px;
+}
+
+/* sidebar row */
+.side_row{
+
+  position: absolute;
+  
+  top: 35px;
+  align-items: center;
+  left: 0;
+  height: 100vh;
+  width: 200px;
+  transform: translateX(-100%);
+  transition: all 0.2s;
+  overflow-y: scroll;
+}
+.side_row a{
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+}
+.side_row li{
+  list-style: none;
+  padding: 5px;
+  font-weight: 700;
+  
+}
+
+.side_row--open{
+  position: fixed;
+  transform: translateX(0%);
+}
+
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height:100vh;
+  background-color: rgba(0, 0, 0, 0);
+  display: none;
+}
+
+.backdrop--open{
+  display: block;
+}
+
+hr{
+  color: #ffffff;
+
+}
+
+
+/* side bar */
+.side-menu{
+  /* position: fixed; */
+  flex-direction: column;
+  width: 150px;
+  height: 100vh;
+
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0);
+}
+.side-menu a svg{
+  size: 20;
+}
+.side-menu li{
+  list-style: none;
+}
+
+.side-menu > a{
+  width: 72px;
+  padding: 16px 0 14px;
+  outline: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-menu > a > span{
+  font-size: 13px;
+}
+
+svg.style-scope.yt-icon {
+  height: 33px;
+  width: 39px;
+  color: aliceblue;
+  fill: aliceblue;
+  /* background-color: blue; */
+}
+
+.recommendations{
+  display: flex;
+  flex-wrap: wrap;
+  /* grid-row: 4; */
+  /* grid-row-end: 4; */
+ margin-right: 3px;
+}
+
+@media only screen and (max-width: 600px) {
+  .recommendations {
+    grid-row: auto;
+    
+    /* background-color: lightblue; */
+  }
+
+  .side-menu{
+    display: none;
+    width: 0;
+  }
+
+  .cards{
+    height:292px;
+    width: 350px;
+  }
+
+  iframe{
+    max-width: 368px;
+    max-height: 288px;
+    background-color: aliceblue;
+    border: 3px solid white;
+  }
+
+}
+
+@media only screen and (min-width: 600px) {
+  .cards{
+    margin-right: 12px;
+  }
+}
+
+
+
+
+.col{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.v_title{
+  cursor: pointer;
+  font-size: 1.0rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.c_title{
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 200;
+  color: #AAAAAA;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.card img{
+  max-width: 368px;
+  max-height: 288px;
+}
+
+@media  (max-width: 600px) {
+  .main{
+    width: 60%;
+    background-color: aqua;
+  }
+}
+
+@media  (max-width: 200px) {
+  .main{
+    width: 30%;
+    background-color: aqua;
+  }
+}
+
+
+.main{
+  height: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  display: block;
+  width: 90%;
+  margin-top: 20px;
+      
+}
+
+.search_rec{
+  display: flex;
+  margin-bottom: 20px;
+  text-decoration: none;
+
+}
+
+.search__details > a{
+  text-decoration: none;
+} 
+.search__details{
+  
+  display: flex;
+  flex-direction: column;
+  margin-left: 18px;
+}
+
+.search_title{
+  font-family: "Roboto","Arial",sans-serif;
+  color: #9BAA9B;
+  /* font-size: 1.8rem; */
+  line-height: 2.6rem;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.search_description{
+  color: #9BAA9B;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: "Roboto","Arial",sans-serif;
+  /* font-size: 1.2rem; */
+  line-height: 1.8rem;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+
+
+.search_rec > img{
+  width: 381px;
+  height: 215px;
+  object-fit: contain;
+  /* /* object-fit: cover; */
+}
